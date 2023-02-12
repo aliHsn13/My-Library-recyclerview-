@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:clickable="true"
+    app:cardCornerRadius="16dp"
+    app:rippleColor="?attr/colorPrimary"
+    app:strokeWidth="1dp"
+    app:strokeColor="?attr/colorPrimary"
+    android:layout_margin="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    app:contentPaddingTop="4dp"
+    android:paddingBottom="4dp"
+    app:contentPadding="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_img_main"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/master_img" />
+        <TextView
+            android:id="@+id/item_txt_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/primary_regular"
+            android:text="The Master And Margarita"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/item_img_main"
+            app:layout_constraintTop_toTopOf="@+id/item_img_main" />
+
+        <TextView
+            android:id="@+id/item_txt_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Mikhail Bulgakov"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/item_img_main"
+            app:layout_constraintTop_toBottomOf="@+id/item_txt_subject" />
+
+        <TextView
+            android:id="@+id/item_txt_nationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="The Soviet Union"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/item_img_main"
+            app:layout_constraintTop_toBottomOf="@+id/item_txt_writer" />
+
+        <RatingBar
+            android:id="@+id/item_rating_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
+            android:progressTint="@color/yellow"
+            android:rating="4.3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/published"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Published in "
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/item_img_main"
+            app:layout_constraintTop_toBottomOf="@+id/item_txt_nationality" />
+
+        <TextView
+            android:id="@+id/item_txt_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="(Goodreads)"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/item_rating_ratingBar"
+            app:layout_constraintStart_toStartOf="@+id/item_rating_ratingBar"
+            app:layout_constraintTop_toBottomOf="@+id/item_rating_ratingBar" />
+
+        <TextView
+            android:id="@+id/item_txt_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1967"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/published"
+            app:layout_constraintStart_toEndOf="@+id/published"
+            app:layout_constraintTop_toTopOf="@+id/published" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.circularreveal.cardview.CircularRevealCardView>
